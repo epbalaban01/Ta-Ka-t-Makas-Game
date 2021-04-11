@@ -1,0 +1,597 @@
+body {
+  font-family: 'Press Start 2P', cursive;
+}
+
+h1 {
+  text-transform: capitalize;
+}
+h1 {
+  font-size: 18px;
+}
+@media screen and (min-width: 300px) {
+  h1 {
+    font-size: calc(18px + 8 * ((100vw - 300px) / 900));
+  }
+}
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 26px;
+  }
+}
+
+h2 {
+  font-size: 18px;
+}
+@media screen and (min-width: 300px) {
+  h2 {
+    font-size: calc(18px + 8 * ((100vw - 300px) / 900));
+  }
+}
+@media screen and (min-width: 1200px) {
+  h2 {
+    font-size: 26px;
+  }
+}
+
+.rpsText {
+  color: gold;
+}
+.rpsText {
+  font-size: 30px;
+}
+@media screen and (min-width: 300px) {
+  .rpsText {
+    font-size: calc(30px + 60 * ((100vw - 300px) / 900));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .rpsText {
+    font-size: 90px;
+  }
+}
+
+.regularText {
+  color: gold;
+}
+.regularText {
+  font-size: 18px;
+}
+@media screen and (min-width: 300px) {
+  .regularText {
+    font-size: calc(18px + 8 * ((100vw - 300px) / 900));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .regularText {
+    font-size: 26px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.selectorOption {
+  font-family: 'Press Start 2P', cursive;
+  color: gold;
+}
+.selectorOption {
+  font-size: 18px;
+}
+@media screen and (min-width: 300px) {
+  .selectorOption {
+    font-size: calc(18px + 8 * ((100vw - 300px) / 900));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .selectorOption {
+    font-size: 26px;
+  }
+}
+
+.messageText {
+  -webkit-filter: drop-shadow(4px 4px 0 brown);
+          filter: drop-shadow(4px 4px 0 brown);
+}
+.messageText {
+  font-size: 30px;
+}
+@media screen and (min-width: 300px) {
+  .messageText {
+    font-size: calc(30px + 60 * ((100vw - 300px) / 900));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .messageText {
+    font-size: 90px;
+  }
+}
+
+.medLabel {
+  color: gold;
+  -webkit-filter: drop-shadow(3px 3px 0 brown);
+          filter: drop-shadow(3px 3px 0 brown);
+  margin-bottom: 25px;
+}
+.medLabel {
+  font-size: 18px;
+}
+@media screen and (min-width: 300px) {
+  .medLabel {
+    font-size: calc(18px + 8 * ((100vw - 300px) / 900));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .medLabel {
+    font-size: 26px;
+  }
+}
+
+.lgLabel {
+  color: brown;
+  -webkit-filter: drop-shadow(2px 2px 0 gold);
+          filter: drop-shadow(2px 2px 0 gold);
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+.lgLabel {
+  font-size: 20px;
+}
+@media screen and (min-width: 300px) {
+  .lgLabel {
+    font-size: calc(20px + 20 * ((100vw - 300px) / 900));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .lgLabel {
+    font-size: 40px;
+  }
+}
+
+.rulesList {
+  -webkit-filter: drop-shadow(2px 2px 0 brown);
+          filter: drop-shadow(2px 2px 0 brown);
+}
+.rulesList {
+  font-size: 15px;
+}
+@media screen and (min-width: 300px) {
+  .rulesList {
+    font-size: calc(15px + 5 * ((100vw - 300px) / 900));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .rulesList {
+    font-size: 20px;
+  }
+}
+
+.playerScoreBoard {
+  word-break: break-all;
+  text-align: center;
+}
+
+.rounds {
+  text-align: center;
+  line-height: 1.25;
+}
+
+.woodBackground {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: gold;
+  border: ridge 4px orange;
+  box-shadow: 3px 3px 0 brown;
+  padding: 5px;
+}
+@media only screen and (min-width: 780px) {
+  .woodBackground {
+    padding: 25px;
+  }
+}
+
+.playAgainContainer {
+  background-image: url("https://raw.githubusercontent.com/rlahoda/rock-paper-scissors/master/dev/assets/roundTrackerBG.jpg");
+  padding: 15px;
+}
+
+.enterNameField {
+  color: gold;
+  border: ridge 4px orange;
+  box-shadow: 3px 3px 0 brown;
+  background-image: url("https://raw.githubusercontent.com/rlahoda/rock-paper-scissors/master/dev/assets/roundTrackerBG.jpg");
+  font-family: inherit;
+  margin: 15px;
+  width: 90vw;
+}
+.enterNameField {
+  font-size: 20px;
+}
+@media screen and (min-width: 300px) {
+  .enterNameField {
+    font-size: calc(20px + 20 * ((100vw - 300px) / 900));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .enterNameField {
+    font-size: 40px;
+  }
+}
+@media only screen and (min-width: 1060px) {
+  .enterNameField {
+    width: 50vw;
+  }
+}
+
+.enterNameButton {
+  color: gold;
+  border: ridge 4px orange;
+  box-shadow: 3px 3px 0 brown;
+  background-image: url("https://raw.githubusercontent.com/rlahoda/rock-paper-scissors/master/dev/assets/roundTrackerBG.jpg");
+  font-family: inherit;
+  padding: 5px;
+}
+.enterNameButton {
+  font-size: 20px;
+}
+@media screen and (min-width: 300px) {
+  .enterNameButton {
+    font-size: calc(20px + 20 * ((100vw - 300px) / 900));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .enterNameButton {
+    font-size: 40px;
+  }
+}
+.enterNameButton:hover {
+  box-shadow: 3px 3px 0 red;
+  color: white;
+}
+.enterNameButton:active {
+  box-shadow: 3px 3px 0 red;
+  color: white;
+  background-color: brown;
+}
+
+.enterRoundsField {
+  color: gold;
+  border: ridge 4px orange;
+  box-shadow: 3px 3px 0 brown;
+  background-image: url("https://raw.githubusercontent.com/rlahoda/rock-paper-scissors/master/dev/assets/roundTrackerBG.jpg");
+  font-family: inherit;
+  width: 10vw;
+}
+.enterRoundsField {
+  font-size: 20px;
+}
+@media screen and (min-width: 300px) {
+  .enterRoundsField {
+    font-size: calc(20px + 20 * ((100vw - 300px) / 900));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .enterRoundsField {
+    font-size: 40px;
+  }
+}
+
+.playingText {
+  text-align: center;
+  -webkit-filter: drop-shadow(2px 2px 0 brown);
+          filter: drop-shadow(2px 2px 0 brown);
+}
+
+.selector {
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("https://raw.githubusercontent.com/rlahoda/rock-paper-scissors/master/dev/assets/mainBG.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+  background-attachment: fixed;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+.scoreBoard {
+  position: fixed;
+  width: 100%;
+  top: -250px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+@media only screen and (min-width: 780px) {
+  .scoreBoard {
+    flex-wrap: nowrap;
+  }
+}
+
+.playerScoreBoard {
+  background-image: url("https://raw.githubusercontent.com/rlahoda/rock-paper-scissors/master/dev/assets/introBG.jpg");
+  margin: 0;
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  order: 2;
+}
+@media only screen and (min-width: 600px) {
+  .playerScoreBoard {
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 780px) {
+  .playerScoreBoard {
+    width: 25%;
+    margin: 15px;
+  }
+}
+
+.scoreBox {
+  padding: 0 20px;
+}
+@media only screen and (min-width: 780px) {
+  .scoreBox {
+    padding: 10px 20px;
+  }
+}
+
+.rounds {
+  background-image: url("https://raw.githubusercontent.com/rlahoda/rock-paper-scissors/master/dev/assets/introBG.jpg");
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  order: 1;
+}
+@media only screen and (min-width: 780px) {
+  .rounds {
+    order: 2;
+    width: 25%;
+  }
+}
+
+.playingContainer {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 0;
+}
+
+.handsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hand {
+  width: 100px;
+  height: 100px;
+}
+@media only screen and (min-width: 780px) {
+  .hand {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media only screen and (min-width: 1060px) {
+  .hand {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .hand {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.leftHand {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.hand svg {
+  width: 100px;
+  height: 100px;
+}
+@media only screen and (min-width: 780px) {
+  .hand svg {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media only screen and (min-width: 1060px) {
+  .hand svg {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .hand svg {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.st0 {
+  fill: none;
+  stroke: gold;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+  -webkit-filter: drop-shadow(2px 2px 0 brown);
+          filter: drop-shadow(2px 2px 0 brown);
+}
+
+.selector {
+  position: fixed;
+  float: left;
+  left: 50%;
+  bottom: -350px;
+  padding: 5px 10px;
+  width: 95%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  background-image: url("https://raw.githubusercontent.com/rlahoda/rock-paper-scissors/master/dev/assets/selectorBG.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (min-width: 780px) {
+  .selector {
+    padding: 20px 50px;
+    width: auto;
+  }
+}
+
+.selectorContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+@media only screen and (min-width: 780px) {
+  .selectorContainer {
+    flex-wrap: nowrap;
+  }
+}
+
+.selectorOption {
+  background: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 5px 5px;
+  padding: 5px 10px;
+  border: ridge 4px orange;
+  box-shadow: 3px 3px 0 brown;
+}
+.selectorOption:hover {
+  color: white;
+  border: ridge 4px brown;
+  box-shadow: 3px 3px 0 orange;
+}
+.selectorOption:active {
+  color: white;
+  border: ridge 4px white;
+  box-shadow: 3px 3px 0 red;
+}
+@media only screen and (min-width: 780px) {
+  .selectorOption {
+    width: auto;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+  }
+}
+
+.messageBox {
+  position: fixed;
+  top: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  z-index: 1000;
+}
+
+.enterRounds {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.enterRoundsForm {
+  width: 100%;
+}
+
+.rulesList {
+  margin-bottom: 1em;
+}
+.rulesList > ul {
+  margin-left: 1em;
+}
+
+.introBox {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-top: 5px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1.5;
+  background-image: url("https://raw.githubusercontent.com/rlahoda/rock-paper-scissors/master/dev/assets/introBG.jpg");
+}
+@media only screen and (min-width: 780px) {
+  .introBox {
+    width: 80%;
+    margin-top: 10px;
+  }
+}
+@media only screen and (min-width: 1060px) {
+  .introBox {
+    width: 65%;
+    margin-top: 20px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .introBox {
+    width: 50%;
+    margin-top: 50px;
+  }
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.fullWidth {
+  width: 100%;
+}

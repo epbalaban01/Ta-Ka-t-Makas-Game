@@ -1,0 +1,479 @@
+// Mixins
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+@mixin respond-at($media) {
+  @media only screen and (min-width: $media) {
+    @content;
+  }
+}
+
+// Media Query Sizes
+$bp-xsmall: 600px;
+$bp-small: 780px;
+$bp-med: 1060px;
+$bp-large: 1400px;
+$min_width: 300px;
+$max_width: 1200px;
+
+// Colors
+$mainText: gold;
+
+
+// Typography
+body {
+  font-family: 'Press Start 2P', cursive;
+}
+
+
+$h1_min_font: 18px;
+$h1_max_font: 26px;
+$h2_min_font: 15px;
+$h2_max_font: 20px;
+$h3_min_font: 15px;
+$h3_max_font: 20px;
+$msg_min_font: 30px;
+$msg_max_font: 90px;
+$name_min_font: 20px;
+$name_max_font: 40px;
+
+h1 {
+  @include fluid-type($min_width, $max_width, $h1_min_font, $h1_max_font);
+  text-transform: capitalize;
+}
+
+h2 {
+  @include fluid-type($min_width, $max_width, $h1_min_font, $h1_max_font);
+}
+
+.rpsText {
+  @include fluid-type($min_width, $max_width, $msg_min_font, $msg_max_font);
+  color: $mainText;
+}
+
+.regularText {
+  @include fluid-type($min_width, $max_width, $h1_min_font, $h1_max_font);
+  color: $mainText;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.selectorOption {
+  font-family: 'Press Start 2P', cursive;
+  @include fluid-type($min_width, $max_width, $h1_min_font, $h1_max_font);
+  color: $mainText;
+}
+
+.messageText {
+  @include fluid-type($min_width, $max_width, $msg_min_font, $msg_max_font);
+  filter: drop-shadow( 4px 4px 0 brown );
+
+}
+
+.medLabel {
+  color: $mainText;
+  @include fluid-type($min_width, $max_width, $h1_min_font, $h1_max_font);
+  filter: drop-shadow( 3px 3px 0 brown );
+  margin-bottom: 25px;
+}
+
+.lgLabel {
+  color: brown;
+  @include fluid-type($min_width, $max_width, $name_min_font, $name_max_font);
+  filter: drop-shadow( 2px 2px 0 $mainText );
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.rulesList {
+  @include fluid-type($min_width, $max_width, $h3_min_font, $h3_max_font);
+  filter: drop-shadow( 2px 2px 0 brown );
+}
+
+.playerScoreBoard {
+  word-break: break-all;
+  text-align: center;
+}
+
+.rounds {
+  text-align: center;
+  line-height: 1.25;
+}
+
+// Appearance
+.woodBackground {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $mainText;
+  border: ridge 4px orange;
+  box-shadow: 3px 3px 0 brown;
+  padding: 5px;
+  @include respond-at($bp-small) {
+    padding: 25px;
+  }
+}
+.playAgainContainer {
+  // background-image: url("/assets/roundTrackerBG.jpg");
+  background-image: url("https://raw.githubusercontent.com/rlahoda/rock-paper-scissors/master/dev/assets/roundTrackerBG.jpg");
+  padding: 15px;
+}
+
+.enterNameField {
+  color: $mainText;
+  border: ridge 4px orange;
+  box-shadow: 3px 3px 0 brown;
+  @include fluid-type($min_width, $max_width, $name_min_font, $name_max_font);
+  // background-image: url("/assets/roundTrackerBG.jpg");
+  background-image: url("https://raw.githubusercontent.com/rlahoda/rock-paper-scissors/master/dev/assets/roundTrackerBG.jpg");
+  font-family: inherit;
+  margin: 15px;
+  width: 90vw;
+  @include respond-at($bp-med) {
+    width: 50vw;
+  }
+}
+
+.enterNameButton {
+  color: $mainText;
+  border: ridge 4px orange;
+  box-shadow: 3px 3px 0 brown;
+  @include fluid-type($min_width, $max_width, $name_min_font, $name_max_font);
+  // background-image: url("/assets/roundTrackerBG.jpg");
+  background-image: url("https://raw.githubusercontent.com/rlahoda/rock-paper-scissors/master/dev/assets/roundTrackerBG.jpg");
+  font-family: inherit;
+  padding: 5px;
+
+  &:hover {
+    box-shadow: 3px 3px 0 red;
+    color: white;
+  }
+
+  &:active {
+    box-shadow: 3px 3px 0 red;
+    color: white;
+    background-color: brown;
+  }
+}
+
+.enterRoundsField {
+  color: $mainText;
+  border: ridge 4px orange;
+  box-shadow: 3px 3px 0 brown;
+  @include fluid-type($min_width, $max_width, $name_min_font, $name_max_font);
+  // background-image: url("/assets/roundTrackerBG.jpg");
+  background-image: url("https://raw.githubusercontent.com/rlahoda/rock-paper-scissors/master/dev/assets/roundTrackerBG.jpg");
+  font-family: inherit;
+  width: 10vw;
+}
+
+.playingText {
+  text-align: center;
+  filter: drop-shadow( 2px 2px 0 brown );
+}
+
+.selector {
+text-align: center;
+}
+
+// Layout
+.container {
+  width: 100%;
+  min-height: 100vh;
+  // background-image: url("/assets/mainBG.jpg");
+  background-image: url("https://raw.githubusercontent.com/rlahoda/rock-paper-scissors/master/dev/assets/mainBG.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+  background-attachment: fixed;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+.scoreBoard {
+  position: fixed;
+  width: 100%;
+  top: -250px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  @include respond-at($bp-small) {
+    flex-wrap: nowrap;
+    }
+}
+
+.playerScoreBoard {
+  // background-image: url("/assets/introBG.jpg");
+  background-image: url("https://raw.githubusercontent.com/rlahoda/rock-paper-scissors/master/dev/assets/introBG.jpg");
+  margin: 0;
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  order: 2;
+  @include respond-at($bp-xsmall) {
+    width: 40%;
+    }
+  @include respond-at($bp-small) {
+    width: 25%;
+    margin: 15px;
+    }
+}
+
+.scoreBox {
+  padding:  0 20px;
+  @include respond-at($bp-small) {
+    padding:  10px 20px;
+    }
+}
+
+.rounds {
+  // background-image: url("/assets/introBG.jpg");
+  background-image: url("https://raw.githubusercontent.com/rlahoda/rock-paper-scissors/master/dev/assets/introBG.jpg");
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  order: 1;
+  @include respond-at($bp-small) {
+    order: 2;
+    width: 25%;
+    }
+}
+
+.playingContainer {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 0;
+}
+
+.handsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hand {
+  width: 100px;
+  height: 100px;
+  @include respond-at($bp-small) {
+    width: 200px;
+    height: 200px;
+    }
+  @include respond-at($bp-med) {
+    width: 250px;
+    height: 250px;
+    }
+  @include respond-at($bp-large) {
+    width: 300px;
+    height: 300px;
+    }
+}
+
+.leftHand {
+  transform: scaleX(-1);
+}
+
+.hand svg {
+  width: 100px;
+  height: 100px;
+  @include respond-at($bp-small) {
+    width: 200px;
+    height: 200px;
+    }
+  @include respond-at($bp-med) {
+    width: 250px;
+    height: 250px;
+    }
+  @include respond-at($bp-large) {
+    width: 300px;
+    height: 300px;
+    }
+}
+
+// SVG Styles for the hands
+.st0 {
+  fill: none;
+  stroke: $mainText;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+  filter: drop-shadow( 2px 2px 0 brown );
+}
+
+.selector {
+  position: fixed;
+  float: left;
+  left: 50%;
+  bottom: -350px;
+  padding: 5px 10px;
+  width: 95%;
+  transform: translate(-50%,0);
+  // background-image: url("/assets/selectorBG.jpg");
+  background-image: url("https://raw.githubusercontent.com/rlahoda/rock-paper-scissors/master/dev/assets/selectorBG.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include respond-at($bp-small) {
+    padding: 20px 50px;
+    width: auto;
+    }
+}
+
+.selectorContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  @include respond-at($bp-small) {
+    flex-wrap: nowrap;
+    }
+}
+
+.selectorOption {
+  background: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 5px 5px;
+  padding: 5px 10px;
+  border: ridge 4px orange;
+  box-shadow: 3px 3px 0 brown;
+  &:hover {
+    color: white;
+    border: ridge 4px brown;
+    box-shadow: 3px 3px 0 orange;
+  }
+  &:active {
+    color: white;
+    border: ridge 4px white;
+    box-shadow: 3px 3px 0 red;
+  }
+  @include respond-at($bp-small) {
+    width: auto;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    }
+}
+
+.messageBox {
+  position: fixed;
+  top: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  z-index: 1000;
+}
+
+.enterRounds {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.enterRoundsForm {
+  width: 100%;
+}
+
+.rulesList {
+  margin-bottom: 1em;
+
+  & > ul {
+    margin-left: 1em;
+  }
+}
+
+.introBox {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5px;
+  width: 95%;
+  @include respond-at($bp-small) {
+    width: 80%;
+    margin-top: 10px;
+    }
+  @include respond-at($bp-med) {
+    width: 65%;
+    margin-top: 20px;
+    }
+  @include respond-at($bp-large) {
+    width: 50%;
+    margin-top: 50px;
+    }
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 50;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  // padding: 25px;
+  line-height: 1.5;
+
+  // background-image: url("/assets/introBG.jpg");
+  background-image: url("https://raw.githubusercontent.com/rlahoda/rock-paper-scissors/master/dev/assets/introBG.jpg");
+}
+
+// utility
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.fullWidth {
+  width: 100%;
+}

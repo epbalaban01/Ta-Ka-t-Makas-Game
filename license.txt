@@ -1,0 +1,18 @@
+
+<! -
+Telif Hakký (c) 2017-2021 Eyüp Can Balaban (https://codepen.io/epbalaban01) | (https://github.io/epbalaban01)
+
+
+Ýþbu belge ile, bu yazýlýmýn ve ilgili belge dosyalarýnýn ("Yazýlým") bir kopyasýný elde eden 
+herhangi bir kiþiye, kullaným, kopyalama, deðiþtirme, birleþtirme haklarý dahil ancak bunlarla sýnýrlý olmamak üzere, kýsýtlama olmaksýzýn 
+Yazýlým üzerinde iþlem yapma izni verilmektedir. Yazýlýmýn kopyalarýný yayýnlamak, daðýtmak, alt lisansýný vermek ve / veya satmak ve Yazýlýmýn 
+saðlandýðý kiþilere aþaðýdaki koþullara tabi olarak izin vermek için:
+
+Yukarýdaki telif hakký bildirimi ve bu izin bildirimi, Yazýlýmýn tüm kopyalarýna veya önemli kýsýmlarýna dahil edilecektir.
+
+YAZILIM, TÝCARÝ ELVERÝÞLÝLÝK, BELÝRLÝ BÝR AMACA UYGUNLUK VE ÝHLAL ETMEME GARANTÝLERÝ DAHÝL ANCAK BUNLARLA SINIRLI OLMAMAK ÜZERE AÇIK VEYA ZIMNÝ 
+HERHANGÝ BÝR GARANTÝ OLMAKSIZIN "OLDUÐU GÝBÝ" SAÐLANIR. YAZARLAR VEYA TELÝF HAKKI SAHÝPLERÝ HÝÇBÝR DURUMDA YAZILIM VEYA KULLANIM YA DA YAZILIMIN 
+KULLANIMI VEYA DÝÐER ÝLÝÞKÝLERDEN KAYNAKLANAN, SÖZLEÞME, ÝÞKENCE VEYA BAÞKA BÝR DAVA DURUMUNDA HERHANGÝ BÝR TALEP, ZARAR VEYA DÝÐER YÜKÜMLÜLÜKLERDEN 
+SORUMLU OLMAYACAKLARDIR.
+
+->

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="tr" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Taş,Kağıt,Makas Oyunu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  
+    <div class="container">
+
+      <div class="messageBox"></div>
+
+      <div class="scoreBoard ">
+        <div class="p1ScoreBoard playerScoreBoard woodBackground">
+          <h1 id="player1Name">Chuck</h1>
+          <div class="scoreBox">
+            <h2 id="player1Score">0</h2>
+          </div>
+        </div>
+        <div class="rounds woodBackground">
+          <h1 class="roundMessage">Tur
+            <span class="roundNumber" id="currentRound">0</span>
+            ve
+            <span class="roundNumber" id="totalRounds">0</span></h1>
+        </div>
+        <div class="p2ScoreBoard playerScoreBoard woodBackground">
+          <h1 id="player2Name">Isabellina</h1>
+          <div class="scoreBox">
+            <h2 id="player2Score">0</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="introBox woodBackground">
+        <h1>Nasıl Oynanır!</h1>
+        <ul class="rulesList">
+          <li>Kaç tur oynandığını seçin</li>
+          <li>Hangi el atmak için seçin:</li>
+          <ul>
+            <li>Taş 💎 - Makas ✂️</li>
+            <li>Makas ✂️ - Kağıt 📜</li>
+            <li>Kağıt 📜 - Taş 💎</li>
+          </ul>
+      </ul>
+      <button id="playGame" type="submit" class="enterNameButton">Oyna</button>
+    </div>
+
+    <div class="selector woodBackground">
+
+      <div class="selectorContainer">
+        <button href="#" class="selectorOption" id="rock" onclick="playRound('rock')">
+          <span class="regularText">Taş</span>💎</button>
+        <button href="#" class="selectorOption" id="paper" onclick="playRound('paper')">
+          <span class="regularText">Kağıt</span>📜</button>
+        <button href="#" class="selectorOption" id="scissors" onclick="playRound('scissors')">
+          <span class="regularText">Makas</span>✂️</button>
+      </div>
+      <h1 class="">Silahını seç!</h1>
+    </div>
+
+    <div class="playingContainer">
+
+      <div class="handsContainer">
+        <div class="hand leftHand leftHandRock">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+            <style type="text/css"></style>
+            <g>
+              <polygon class="st0" points="125.4,47.6 85.5,47.6 72.7,34.8 49.9,34.8 47,37.7 28.4,37.7 24.3,41.7 24.3,50.1 27.9,51.9
+          		24.3,54.2 24.3,62.5 27.7,65 24.3,68 24.3,76.1 29.2,78.9 29.2,89.5 32.8,93.2 75.9,93.2 86.2,82.9 125.4,82.9 	"/>
+              <polyline class="st0" points="61,46.3 61,63.2 58.1,66.1 50.4,66.1 47,62.8 47,37.7 	"/>
+              <line class="st0" x1="27.9" y1="51.9" x2="47" y2="51.9"/>
+              <line class="st0" x1="27.7" y1="65" x2="47" y2="65"/>
+              <polyline class="st0" points="29.2,78.9 53,78.9 56.6,75.3 56.6,66.1 	"/>
+              <polyline class="st0" points="56.6,93.2 56.6,81.9 53.3,78.6 	"/>
+            </g>
+          </svg>
+        </div>
+        <div class="hand rightHand rightHandRock">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+            <style type="text/css"></style>
+            <g>
+              <polygon class="st0" points="125.4,47.6 85.5,47.6 72.7,34.8 49.9,34.8 47,37.7 28.4,37.7 24.3,41.7 24.3,50.1 27.9,51.9
+         		24.3,54.2 24.3,62.5 27.7,65 24.3,68 24.3,76.1 29.2,78.9 29.2,89.5 32.8,93.2 75.9,93.2 86.2,82.9 125.4,82.9 	"/>
+              <polyline class="st0" points="61,46.3 61,63.2 58.1,66.1 50.4,66.1 47,62.8 47,37.7 	"/>
+              <line class="st0" x1="27.9" y1="51.9" x2="47" y2="51.9"/>
+              <line class="st0" x1="27.7" y1="65" x2="47" y2="65"/>
+              <polyline class="st0" points="29.2,78.9 53,78.9 56.6,75.3 56.6,66.1 	"/>
+              <polyline class="st0" points="56.6,93.2 56.6,81.9 53.3,78.6 	"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="playingText">
+        <span class="visuallyhidden rockText rpsText">
+          Taş!
+        </span>
+        <span class="visuallyhidden paperText rpsText">
+          Kağıt!
+        </span>
+        <span class="visuallyhidden scissorsText rpsText">
+          Makas!
+        </span>
+        <span class="visuallyhidden shootText rpsText">
+          Ateş Etme!
+        </span>
+      </div>
+    </div>
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/CSSPlugin.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/AttrPlugin.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
